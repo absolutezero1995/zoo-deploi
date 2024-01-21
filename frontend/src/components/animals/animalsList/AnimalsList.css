@@ -1,0 +1,7 @@
+.animals-list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 40px;
+  max-width: 1300px; /* Добавлено ограничение на максимальную ширину сетки */
+  margin: 0 auto; /* Центрирование сетки на странице */
+}

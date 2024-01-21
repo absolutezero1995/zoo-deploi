@@ -1,0 +1,100 @@
+.animal-card-wrapper {
+  display: flex;
+}
+
+#previous,
+#next {
+  font-size: 20px;
+  background: transparent;
+  color: white;
+}
+
+#previous:hover,
+#next:hover {
+  border: none;
+}
+
+#previous,
+#next {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+#previous:hover,
+#next:hover {
+  border-color: #1a1a1a;
+}
+#previous:focus,
+#previous:focus-visible,
+#next:focus,
+#next:focus {
+  outline: 0px auto -webkit-focus-ring-color;
+}
+
+.animal-card-container {
+  height: 300px;
+  width: 100%; /* Ширина установлена в 100% */
+  border-radius: 40px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.animal-name {
+  margin-left: 30px;
+
+  margin-bottom: 20px;
+}
+
+.animal-card-text-h2 {
+  color: #fff;
+  /* font-size: 1.4rem; */
+  background-color: rgba(45, 28, 28, 0.282);
+  border-radius: 40px;
+  font-size: 30px;
+}
+
+.animal-card-flex {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.animal-card-flex p {
+  color: white;
+  opacity: 0.8;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+
+.btn-wrapper button {
+  border-radius: 14px;
+  background: rgb(255, 210, 0);
+  transition: 0.5s;
+  border: none;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-wrapper button:hover {
+  background: orange;
+  border: none;
+}

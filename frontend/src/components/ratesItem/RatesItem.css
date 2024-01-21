@@ -1,0 +1,38 @@
+.rate-card-container {
+  height: 300px;
+  width: 100%; /* Ширина установлена в 100% */
+  border-radius: 40px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  transition: 0.5s;
+  /* border: 2px solid rgb(122, 193, 67); */
+}
+
+.rate-card-container:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(122, 193, 67, 0.3);
+}
+
+.rate-card-text-h2 {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-top: 2px;
+  padding-left: 15px;
+  width: 250px;
+  border-radius: 40px;
+  background-color: rgba(45, 28, 28, 0.282);
+}
+
+.less {
+  width: 90px;
+  padding-left: 15px;
+  font-weight: 400;
+}
