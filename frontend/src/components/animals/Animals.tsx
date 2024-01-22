@@ -15,7 +15,7 @@ function Animals(): JSX.Element {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("http://localhost:3000/api/animals");
+        const res = await fetch("/api/animals");
         if (!res.ok) {
           throw new Error(`Failed to fetch animals: ${res.status} ${res.statusText}`);
         }
@@ -32,7 +32,7 @@ function Animals(): JSX.Element {
 
   const onHandleRemove = async (value: AnimalId): Promise<void> => {
     try {
-      const res = await fetch(`http://localhost:3000/api/animals/${value}`, {
+      const res = await fetch(`/api/animals/${value}`, {
         method: "DELETE",
       });
 
@@ -57,7 +57,7 @@ const onHandleUpdate = async (value: AnimalId, updateData: UpdateData): Promise<
       return;
     }
 
-    const res = await fetch(`http://localhost:3000/api/animals/${value}`, {
+    const res = await fetch(`/api/animals/${value}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

@@ -13,7 +13,7 @@ export default function RatesForm() {
 
   //
   async function fetchRates() {
-    const response = await fetch("http://localhost:3000/api/rates");
+    const response = await fetch("/api/rates");
     const currentPrice = await response.json();
     return currentPrice;
   }
@@ -36,7 +36,7 @@ export default function RatesForm() {
 
   const handleEditRates = async (): Promise<void> => {
     try {
-      const editRates = await fetch("http://localhost:3000/api/rates", {
+      const editRates = await fetch("/api/rates", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ adultsWeekday, childrenWeekday, adultsWeekend, childrenWeekend }),

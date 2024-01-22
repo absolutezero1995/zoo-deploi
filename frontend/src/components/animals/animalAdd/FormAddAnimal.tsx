@@ -22,7 +22,7 @@ export default function FormAddAnimal({
   const onHandleSubmit: React.FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
     try {
-      const res = await fetch("http://localhost:3000/api/animals", {
+      const res = await fetch("/api/animals", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
