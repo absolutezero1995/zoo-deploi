@@ -6,7 +6,7 @@ function Rates(): JSX.Element {
   const [rates, setRates] = useState([]);
 
   useEffect(() => {
-    void fetch("http://localhost:3000/api/rates")
+    void fetch("http://localhost:3001/api/rates")
       .then((res) => res.json())
       .then((data) => setRates(data));
   }, []);
