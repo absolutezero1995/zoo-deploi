@@ -4,13 +4,9 @@ const cookieParser = require("cookie-parser");
 const ssr = require("../middleware/ssr");
 const getUser = require("../middleware/getUser");
 const sessionConfig = require("../config/sessionConfig");
-const cors = require('cors');
 
-const corsOption = {
-  origin: '*',
-  credentials: true,
-  optionsSuccessStatus: 200
-}
+
+
 
 const serverConfig = (app) => {
   app.use(cookieParser());
@@ -20,7 +16,6 @@ const serverConfig = (app) => {
   app.use(express.static("public"));
   app.use(ssr);
   app.use(getUser);
-  app.use(cors(corsOption));
 };
 
 module.exports = serverConfig;

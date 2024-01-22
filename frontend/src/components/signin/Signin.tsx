@@ -39,13 +39,11 @@ const Signin: React.FC<SignInProps> = ({ setIsAuth }) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ email: formData.email, password: formData.password }),
-        credentials: "include",
       });
       if (response.ok) {
         console.log("Login successful");
         setIsAuth(true);
         navigate("/");
-        // window.location.reload();
       } else {
         const errorData = await response.json();
         setError(`Login failed: ${errorData.message}`);

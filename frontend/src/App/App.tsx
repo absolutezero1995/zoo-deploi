@@ -21,7 +21,7 @@ function App(): JSX.Element {
   const [isAuth, setIsAuth] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/check", { credentials: 'include' })
+    fetch("http://localhost:3000/api/check")
     .then((data) => data.json())
     .then((data: User) => {
       if (data) {
@@ -34,7 +34,7 @@ function App(): JSX.Element {
   }, [])
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/check", { credentials: 'include' })
+    fetch("http://localhost:3000/api/check")
       .then((data) => data.json())
       .then((data: User) => {
         if (data) {
