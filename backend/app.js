@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 const IndexRout = require("./routes/Index.routes");
 
 config(app);
-//loh
+
 app.use("/", IndexRout);
 
 app.listen(PORT, () => {
